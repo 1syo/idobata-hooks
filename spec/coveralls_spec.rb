@@ -8,7 +8,7 @@ describe Idobata::Hook::Coveralls, type: :hook do
   describe '#process_payload' do
     subject { hook.process_payload }
 
-    context 'increased coverrage' do
+    context 'coverage increased' do
       let(:fixture) { 'increased' }
 
       its([:source]) { should eq(<<-HTML.strip_heredoc) }
@@ -26,7 +26,7 @@ describe Idobata::Hook::Coveralls, type: :hook do
       its([:format]) { should eq(:html) }
     end
 
-    context 'decreased' do
+    context 'coverage decreased' do
       let(:fixture) { 'decreased' }
 
       its([:source]) { should eq(<<-HTML.strip_heredoc) }
@@ -44,7 +44,7 @@ describe Idobata::Hook::Coveralls, type: :hook do
       its([:format]) { should eq(:html) }
     end
 
-    context 'same' do
+    context 'same coverage' do
       let(:fixture) { 'same' }
 
       its([:source]) { should eq(<<-HTML.strip_heredoc) }
@@ -62,7 +62,7 @@ describe Idobata::Hook::Coveralls, type: :hook do
       its([:format]) { should eq(:html) }
     end
 
-    context 'ambiguous' do
+    context 'ambiguous coverage' do
       let(:fixture) { 'ambiguous' }
 
       its([:source]) { should eq(<<-HTML.strip_heredoc) }
