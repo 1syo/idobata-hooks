@@ -19,7 +19,7 @@ describe Idobata::Hook::Coveralls, type: :hook do
         coverage increased (3.5) to
         <span class='label label-info'>99.35%</span>
         on branch-name after commit:
-        commit message by Committer Name <user@example.com>
+        commit message by Committer Name &lt;user@example.com&gt;
       </p>
       HTML
 
@@ -37,7 +37,7 @@ describe Idobata::Hook::Coveralls, type: :hook do
         coverage decreased (-0.8) to
         <span class='label label-info'>88.19%</span>
         on branch-name after commit:
-        commit message by Committer Name <user@example.com>
+        commit message by Committer Name &lt;user@example.com&gt;
       </p>
       HTML
 
@@ -55,7 +55,7 @@ describe Idobata::Hook::Coveralls, type: :hook do
         coverage remained the same at
         <span class='label label-info'>100.00%</span>
         on branch-name after commit:
-        commit message by Committer Name <user@example.com>
+        commit message by Committer Name &lt;user@example.com&gt;
       </p>
       HTML
 
@@ -73,7 +73,7 @@ describe Idobata::Hook::Coveralls, type: :hook do
         coverage remained the same at
         <span class='label label-info'>0.00%</span>
         on branch-name after commit:
-        commit message by Committer Name <user@example.com>
+        commit message by Committer Name &lt;user@example.com&gt;
       </p>
       HTML
 
