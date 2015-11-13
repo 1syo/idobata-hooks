@@ -16,10 +16,16 @@ describe Idobata::Hook::Coveralls, type: :hook do
         <a href='https://example.io/builds/987654321'>
           gihub-user/repo-name
         </a>
-        coverage increased (3.5) to
+        coverage increased
+        <span class='badge progress-bar-success'>3.50</span>
+        to
         <span class='label label-info'>99.35%</span>
-        on branch-name after commit:
-        commit message by Committer Name &lt;user@example.com&gt;
+        on branch-name after commit
+        <ul>
+          <li>
+            commit message by Committer Name &lt;user@example.com&gt;
+          </li>
+        </ul>
       </p>
       HTML
 
@@ -34,10 +40,16 @@ describe Idobata::Hook::Coveralls, type: :hook do
         <a href='https://example.io/builds/987654321'>
           gihub-user/repo-name
         </a>
-        coverage decreased (-0.8) to
+        coverage decreased
+        <span class='badge progress-bar-danger'>-0.80</span>
+        to
         <span class='label label-info'>88.19%</span>
-        on branch-name after commit:
-        commit message by Committer Name &lt;user@example.com&gt;
+        on branch-name after commit
+        <ul>
+          <li>
+            commit message by Committer Name &lt;user@example.com&gt;
+          </li>
+        </ul>
       </p>
       HTML
 
@@ -54,8 +66,12 @@ describe Idobata::Hook::Coveralls, type: :hook do
         </a>
         coverage remained the same at
         <span class='label label-info'>100.00%</span>
-        on branch-name after commit:
-        commit message by Committer Name &lt;user@example.com&gt;
+        on branch-name after commit
+        <ul>
+          <li>
+            commit message by Committer Name &lt;user@example.com&gt;
+          </li>
+        </ul>
       </p>
       HTML
 
@@ -72,8 +88,12 @@ describe Idobata::Hook::Coveralls, type: :hook do
         </a>
         coverage remained the same at
         <span class='label label-info'>0.00%</span>
-        on branch-name after commit:
-        commit message by Committer Name &lt;user@example.com&gt;
+        on branch-name after commit
+        <ul>
+          <li>
+            commit message by Committer Name &lt;user@example.com&gt;
+          </li>
+        </ul>
       </p>
       HTML
 
