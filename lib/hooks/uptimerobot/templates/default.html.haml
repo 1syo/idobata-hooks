@@ -1,0 +1,5 @@
+%p
+  %a{href: params[:monitorURL]}=params[:monitorFriendlyName]
+  is #{params[:alertTypeFriendlyName]}
+  = surround '(', ')' do
+    %a{href: "https://uptimerobot.com/dashboard##{params[:monitorID]}"} detail

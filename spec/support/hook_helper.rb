@@ -11,6 +11,10 @@ module HookHelper
     @hook = described_class.new(raw_body, Rack::Utils::HeaderHash.new(headers), ActiveSupport::HashWithIndifferentAccess.new(params))
   end
 
+  def get(params = {})
+    post(nil, {}, params)
+  end
+
   def fixture_payload(filename)
     Idobata::Hook.root.join('../spec/fixtures/payload', filename).read
   end
