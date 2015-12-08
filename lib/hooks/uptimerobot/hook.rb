@@ -1,6 +1,6 @@
 module Idobata::Hook
   class Uptimerobot < Base
     screen_name 'Uptimerobot'
-    icon_url    'https://github.com/coveralls.png'
+    icon_url    ''
   end
 end
