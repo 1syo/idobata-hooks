@@ -1,0 +1,12 @@
+%p
+  Build #{payload.status}: #{payload.project_name}
+  = surround '(', ')' do
+    %a{href: payload.build_url} build
+  \:
+  %span.label{class: label_class_from_build_status(payload.status)}
+    = payload.status.titleize
+
+%p
+  #{payload.committer}: #{payload.message}
+  = surround '(', ')' do
+    %a{href: payload.commit_url}= payload.short_commit_id
