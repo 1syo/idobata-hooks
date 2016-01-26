@@ -1,7 +1,7 @@
 module Idobata::Hook
   class Codeship
     module Helper
-      def label_class(status)
+      def label_class_from_build_status(status)
         case status
           when 'success'
             'label-success'
