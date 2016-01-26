@@ -1,0 +1,22 @@
+:ruby
+  label_class = case payload.status
+                when 'success'
+                  'label-success'
+                when 'error','stopped','infrastructure_failure'
+                  'label-danger'
+                else
+                  'label-default'
+                end
+
+%p
+  = precede "#{payload.project_name}" do
+    %a{href: payload.build_url}
+
+  (#{payload.branch}):
+  %span.label(class=label_class)= payload.status
+
+%p
+  #{payload.committer}: #{payload.message}
+
+  = surround '(', ')' do
+    %a{href: payload.commit_url} commit
