@@ -1,0 +1,11 @@
+%p
+  %a{href: params[:monitorURL]}=params[:monitorFriendlyName]
+  is
+  - if params[:alertType] == '2'
+    %span.label.label-success=params[:alertTypeFriendlyName]
+  - else
+    %span.label.label-danger=params[:alertTypeFriendlyName]
+  %b
+    #{params[:alertDetails]}
+  = surround '(', ')' do
+    %a{href: "https://uptimerobot.com/dashboard##{params[:monitorID]}"} detail
